@@ -1,0 +1,11 @@
+stages:
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: ytorg/Yotter
+      pushRemote: true
+      registry: docker-registry.k.nzmty.com
+timeout: 60
+notification: {}
